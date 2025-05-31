@@ -38,7 +38,7 @@ export const usePhotographerStore = create<PhotographerState>((set) => ({
   fetchPhotographers: async () => {
     set({ loading: true, error: null });
     try {
-      const res = await fetch('http://localhost:3001/photographers');
+      const res = await fetch('/api/photographers');
       const data = await res.json();
       set({ photographers: data, filtered: data, loading: false });
     } catch {
