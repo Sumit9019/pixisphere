@@ -26,8 +26,9 @@ const PhotographerProfilePage = () => {
       setLoading(true);
       setError(null);
       try {
+        if (!params || !params.id) throw new Error("Invalid photographer id");
         const id = Array.isArray(params.id) ? params.id[0] : params.id;
-        const res = await fetch(`http://localhost:3001/photographers/${id}`);
+        const res = await fetch(`/api/photographers/${id}`);
         if (!res.ok) throw new Error("Not found");
         const data = await res.json();
         setPhotographer(data);
@@ -38,7 +39,7 @@ const PhotographerProfilePage = () => {
       }
     };
     fetchPhotographer();
-  }, [params.id]);
+  }, [params]);
 
   if (loading)
     return (
