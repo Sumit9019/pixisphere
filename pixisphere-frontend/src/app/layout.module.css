@@ -1,0 +1,27 @@
+/* layout.module.css */
+
+.rootHtml {
+  height: 100%;
+}
+
+.rootBody {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-variant-ligatures: contextual;
+  background: #f8fafc;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark .rootBody {
+  background: #18181b;
+  color: #f4f4f5;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

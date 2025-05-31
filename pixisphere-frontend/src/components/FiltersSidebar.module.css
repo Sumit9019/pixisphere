@@ -1,0 +1,78 @@
+.filtersSidebar {
+  width: 100%;
+  max-width: 18rem;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #f3f4f6;
+}
+@media (min-width: 640px) {
+  .filtersSidebar {
+    margin-bottom: 0;
+  }
+}
+
+.filterGroup {
+  margin-bottom: 1.5rem;
+}
+.filterLabel {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #334155;
+}
+.priceRange {
+  width: 100%;
+  accent-color: #4299e1;
+}
+.priceRangeValues {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+.selectInput {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.selectInput:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 2px #90cdf4;
+}
+.stylesWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.styleCheckboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: #e0f2fe;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #2563eb;
+  transition: background 0.2s;
+}
+.styleCheckboxLabel:hover {
+  background: #bae6fd;
+}
+.styleCheckbox {
+  accent-color: #4299e1;
+}
+.styleName {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #2563eb;
+}

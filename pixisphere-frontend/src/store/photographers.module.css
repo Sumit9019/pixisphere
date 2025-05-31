@@ -1,0 +1,110 @@
+.photographerListWrapper {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.photographerListTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2b6cb0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.photographerGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 640px) {
+  .photographerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .photographerGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.photographerCard {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.photographerCard:hover {
+  box-shadow: 0 8px 32px rgba(59,130,246,0.12);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.photographerPic {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 9999px;
+  border: 4px solid #ebf8ff;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.photographerName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.25rem;
+}
+
+.photographerLocation {
+  color: #718096;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.photographerPrice {
+  color: #2b6cb0;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.photographerRating {
+  color: #2c5282;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.photographerTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.photographerTag {
+  background: #bee3f8;
+  color: #2b6cb0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.photographerBtn {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(to right, #4299e1, #2b6cb0);
+  color: white;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.photographerBtn:hover {
+  background: linear-gradient(to right, #3182ce, #2c5282);
+}

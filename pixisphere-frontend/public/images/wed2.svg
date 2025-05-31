@@ -1,0 +1,5 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#fce4ec"/>
+  <ellipse cx="100" cy="100" rx="70" ry="50" fill="#d81b60"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="24" fill="#fff">Wed 2</text>
+</svg>

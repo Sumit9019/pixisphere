@@ -1,0 +1,123 @@
+.homeWrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 20px 1fr 20px;
+  align-items: center;
+  justify-items: center;
+  padding: 2rem;
+  padding-bottom: 5rem;
+  gap: 4rem;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  background: linear-gradient(to bottom right, #f0f4f8, #fff);
+}
+@media (min-width: 640px) {
+  .homeWrapper {
+    padding: 5rem;
+  }
+}
+
+.homeMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  grid-row-start: 2;
+  align-items: center;
+}
+@media (min-width: 640px) {
+  .homeMain {
+    align-items: flex-start;
+  }
+}
+
+.homeLogo {
+  filter: invert(0.8) grayscale(1);
+  margin-bottom: 1rem;
+}
+
+.homeList {
+  list-style: decimal inside;
+  font-size: 1rem;
+  color: #334155;
+  text-align: center;
+  font-family: var(--font-geist-mono), monospace;
+}
+@media (min-width: 640px) {
+  .homeList {
+    text-align: left;
+  }
+}
+
+.homeCode {
+  background: #f1f5f9;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 600;
+}
+
+.homeLinks {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 640px) {
+  .homeLinks {
+    flex-direction: row;
+  }
+}
+
+.homeLinkBtn {
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  transition: background 0.2s, border 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  background: #1e293b;
+  color: #fff;
+  text-decoration: none;
+}
+.homeLinkBtn:hover {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.homeDocsBtn {
+  background: #fff;
+  color: #1e293b;
+  border: 1px solid #e5e7eb;
+}
+.homeDocsBtn:hover {
+  background: #f2f2f2;
+  color: #1e293b;
+  border-color: #2563eb;
+}
+
+.homeFooter {
+  grid-row-start: 3;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.homeFooterLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: text-decoration 0.2s;
+}
+.homeFooterLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

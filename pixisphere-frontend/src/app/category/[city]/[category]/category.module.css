@@ -1,0 +1,110 @@
+.categoryPageWrapper {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #ebf8ff, #ffffff);
+  padding: 2rem 1rem;
+}
+
+.categoryTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #2b6cb0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+}
+
+@media (min-width: 640px) {
+  .categoryTitle {
+    text-align: left;
+  }
+}
+
+.categoryMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .categoryMain {
+    flex-direction: row;
+  }
+}
+
+.categoryGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 1rem;
+}
+@media (min-width: 640px) {
+  .categoryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .categoryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skeletonCard {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  height: 16rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  color: #718096;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-align: center;
+}
+
+.emptyState img {
+  height: 10rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.loadMoreBtn {
+  padding: 0.75rem 2rem;
+  background: linear-gradient(to right, #4299e1, #2b6cb0);
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(66,153,225,0.2);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.loadMoreBtn:hover {
+  background: linear-gradient(to right, #3182ce, #2c5282);
+  box-shadow: 0 4px 16px rgba(66,153,225,0.25);
+}
+
+.errorMsg {
+  color: #e53e3e;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
