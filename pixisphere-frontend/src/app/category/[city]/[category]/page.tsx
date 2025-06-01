@@ -10,7 +10,7 @@ import { useRouter, useParams } from 'next/navigation';
 import styles from "./category.module.css";
 
 
-const css = styles as any;
+const css: { [key: string]: string } = styles;
 
 const allStyles = ["Traditional", "Candid", "Studio", "Outdoor", "Indoor"];
 
