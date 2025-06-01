@@ -2,6 +2,9 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
 import { promises as fs } from 'fs';
 
+// Import Photographer type for type safety
+import type { Photographer } from '@/store/photographers';
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const {
     query: { id },
@@ -10,7 +13,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const data = await fs.readFile(dbPath, 'utf-8');
     const json = JSON.parse(data);
-    const photographer = (json.photographers || []).find((p: any) => String(p.id) === String(id));
+    const photographers: Photographer[] = json.photographers || [];
+    const photographer = photographers.find((p) => String(p.id) === String(id));
     if (!photographer) {
       res.status(404).json({ error: 'Photographer not found' });
       return;

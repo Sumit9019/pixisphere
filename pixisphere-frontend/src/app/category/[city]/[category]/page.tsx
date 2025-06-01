@@ -4,6 +4,7 @@ import { usePhotographerStore } from '@/store/photographers';
 import PhotographerCard from '@/components/PhotographerCard';
 import FiltersSidebar from '@/components/FiltersSidebar';
 import SearchBar from '@/components/SearchBar';
+import Image from 'next/image';
 
 import { useRouter, useParams } from 'next/navigation';
 import styles from "./category.module.css";
@@ -111,7 +112,7 @@ const CategoryListingPage = () => {
 
           {!loading && !filtered.length && (
             <div className={css.emptyState}>
-              <img src="/empty-state.svg" alt="No results" />
+              <Image src="/empty-state.svg" alt="No results" width={160} height={160} />
               <p className="text-lg font-medium">No photographers found.</p>
               <p className="text-sm">Try adjusting your filters or search query.</p>
             </div>

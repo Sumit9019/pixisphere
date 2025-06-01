@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { Photographer } from "@/store/photographers";
+import Image from "next/image";
 import "../../globals.css";
 
 const getPlaceholderImage = (id: number) => {
@@ -58,16 +59,13 @@ const PhotographerProfilePage = () => {
     <div className="pageWrapper">
       <div className="profileCard">
         <div className="profileLeft">
-          <img
+          <Image
             src={photographer.profilePic || getPlaceholderImage(photographer.id)}
-            onError={(e) =>
-              ((e.currentTarget as HTMLImageElement).src = getPlaceholderImage(
-                photographer.id
-              ))
-            }
             alt={photographer.name}
-            loading="lazy"
+            width={128}
+            height={128}
             className="profilePic"
+            priority={false}
           />
           <div className="rating">
             <span className="text-yellow-500">★</span>
@@ -107,16 +105,12 @@ const PhotographerProfilePage = () => {
         <h2>Gallery</h2>
         <div className="galleryGrid">
           {photographer.portfolio.map((img, i) => (
-            <img
+            <Image
               key={i}
               src={img.replace(".jpg", ".svg")}
               alt="Portfolio"
-              onError={(e) =>
-                ((e.currentTarget as HTMLImageElement).src = getPlaceholderImage(
-                  i + 1
-                ))
-              }
-              loading="lazy"
+              width={200}
+              height={160}
               className="galleryImage"
             />
           ))}
