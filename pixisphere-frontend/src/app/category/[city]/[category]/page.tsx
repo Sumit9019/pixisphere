@@ -9,8 +9,7 @@ import Image from 'next/image';
 import { useRouter, useParams } from 'next/navigation';
 import styles from "./category.module.css";
 
-// Add this for TypeScript to recognize CSS module keys
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+
 const css = styles as any;
 
 const allStyles = ["Traditional", "Candid", "Studio", "Outdoor", "Indoor"];
@@ -74,7 +73,7 @@ const CategoryListingPage = () => {
   return (
     <div className={css.categoryPageWrapper}>
       <h1 className={css.categoryTitle}>
-        {getParamString(params?.category) ? `${getParamString(params?.category)} Photographers` : 'Photographers'}
+        {getParamString(params?.category) ? `All Photographers` : 'Photographers'}
       </h1>
 
       <SearchBar value={search} onChange={setSearch} />
