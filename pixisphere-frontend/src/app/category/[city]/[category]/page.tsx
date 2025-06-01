@@ -37,14 +37,6 @@ const CategoryListingPage = () => {
 
   useEffect(() => {
     let result = [...photographers];
-    const categoryParam = getParamString(params?.category);
-    if (categoryParam) {
-      result = result.filter(p => p.tags.map(t => t.toLowerCase()).includes(categoryParam.toLowerCase()));
-    }
-    const cityParam = getParamString(params?.city);
-    if (cityParam) {
-      result = result.filter(p => p.location.toLowerCase() === cityParam.toLowerCase());
-    }
     if (city) {
       result = result.filter(p => p.location.toLowerCase() === city.toLowerCase());
     }
@@ -67,7 +59,7 @@ const CategoryListingPage = () => {
     if (sort === 'rating-desc') result.sort((a, b) => b.rating - a.rating);
     if (sort === 'recent') result.sort((a, b) => b.id - a.id);
     setFiltered(result);
-  }, [photographers, priceRange, rating, styles, city, sort, search, params, setFiltered]);
+  }, [photographers, priceRange, rating, styles, city, sort, search, setFiltered]);
 
   const availableCities = useMemo(() => Array.from(new Set(photographers.map(p => p.location))), [photographers]);
 
